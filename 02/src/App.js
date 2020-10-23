@@ -24,11 +24,9 @@ const Main = () => (
 		</main>
 );
 
-const Render = (
-	<div>
-    <Header></Header>
-		<Main></Main>
-		<section className="features">
+const Features = () => {
+  return(
+    <section className="features">
 			<div className="wrapper">
 				<div className="features-wrapper">
 					<h2 className="features-head">Уникальный заголовок для преимущества компании</h2>
@@ -76,7 +74,11 @@ const Render = (
 				</div>
 			</div>
 		</section>
-		<section className="contact">
+  )
+};
+
+const Contact = () => (
+  <section className="contact">
 			<div className="wrapper">
 				<div className="contact-wrapper">
 					<h2 className="contact-title">Остались вопросы?</h2>
@@ -92,7 +94,11 @@ const Render = (
 				</div>
 			</div>
 		</section>
-		<footer>
+);
+
+
+const Footer = () => (
+  <footer>
 			<div className="footer">
 				<div className="footer-logo"></div>
 				<div className="footer-company"><span>© 2020 XXXcompany. Все права защищены.</span></div>
@@ -103,7 +109,16 @@ const Render = (
 				<div className="footer-phonelink"><a href="tel:888">+7(962)556-1234</a></div>
 			</div>
 		</footer>
-	</div>
+);
+
+const Render = (
+	<>
+    <Header></Header>
+		<Main></Main>
+		<Features></Features>
+		<Contact></Contact>
+		<Footer></Footer>
+	</>
 
 );
 
